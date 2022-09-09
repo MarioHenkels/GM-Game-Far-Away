@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPlayer1",
-    "path": "sprites/sPlayer1/sPlayer1.yy",
+    "name": "sBullet1",
+    "path": "sprites/sBullet1/sBullet1.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,11 +21,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -33,7 +29,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayer",
+  "name": "oBullet1",
   "tags": [],
   "resourceType": "GMObject",
 }
