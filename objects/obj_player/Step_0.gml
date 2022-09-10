@@ -11,21 +11,21 @@ var moveX = key_right - key_left;
 
 var moveY = key_down - key_up;
 
-hsp = moveX * walkSpeed;
-vsp = moveY * walkSpeed;
+hsp = moveX * flightSpeed;
+vsp = moveY * flightSpeed;
 
 //Colisão Horizontal
-if(place_meeting(x + hsp, y, oWall)){
+if(place_meeting(x + hsp, y, obj_wall)){
     
-    while(!place_meeting(x+sign(hsp), y, oWall)){
+    while(!place_meeting(x+sign(hsp), y, obj_wall)){
         x += sign(hsp);
     }
     hsp = 0;
 }
 //Colisão Vertical
-if(place_meeting(x, y + vsp, oWall)){
+if(place_meeting(x, y + vsp, obj_wall)){
     
-    while(!place_meeting(x, y + sign(vsp), oWall)){
+    while(!place_meeting(x, y + sign(vsp), obj_wall)){
         y += sign(vsp);
     }
     vsp = 0;

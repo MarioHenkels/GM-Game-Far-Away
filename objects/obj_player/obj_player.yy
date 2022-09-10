@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPlayer1",
-    "path": "sprites/sPlayer1/sPlayer1.yy",
+    "name": "spr_player1",
+    "path": "sprites/spr_player1/spr_player1.yy",
   },
   "solid": false,
   "visible": true,
@@ -29,11 +29,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "player",
+    "path": "folders/Objects/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayer",
+  "name": "obj_player",
   "tags": [],
   "resourceType": "GMObject",
 }

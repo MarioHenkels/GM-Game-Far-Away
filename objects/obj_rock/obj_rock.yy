@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBullet1",
-    "path": "sprites/sBullet1/sBullet1.yy",
+    "name": "spr_rock_medium",
+    "path": "sprites/spr_rock_medium/spr_rock_medium.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "props",
+    "path": "folders/Objects/props.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBullet1",
+  "name": "obj_rock",
   "tags": [],
   "resourceType": "GMObject",
 }
