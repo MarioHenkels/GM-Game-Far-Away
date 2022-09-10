@@ -11,8 +11,8 @@ var moveX = key_right - key_left;
 
 var moveY = key_down - key_up;
 
-hsp = moveX * flightSpeed;
-vsp = moveY * flightSpeed;
+hsp = moveX * flightSpd;
+vsp = moveY * flightSpd;
 
 //Colisão Horizontal
 if(place_meeting(x + hsp, y, obj_wall)){

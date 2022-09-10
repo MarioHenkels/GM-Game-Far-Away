@@ -11,34 +11,10 @@ var moveX = key_right - key_left;
 
 var moveY = key_down - key_up;
 
-switch(moveX) {
-    case 1:
-    motion_add(0, accel);
-    break;
-    case -1:
-    motion_add(180, accel);
-    break;
-}
-if(hspeed > flightSpeed){
-    hspeed = flightSpeed;
-} else if (hspeed < -flightSpeed) {
-    hspeed = -flightSpeed
-}
-
-switch(moveY) {
-    case 1:
-    motion_add(270, accel);
-    break;
-    case -1:
-    motion_add(90, accel);
-    break;
-}
-if(vspeed > flightSpeed){
-    vspeed = flightSpeed;
-} else if (vspeed < -flightSpeed) {
-    vspeed = -flightSpeed
-}
-
+handlePlayerMovement(moveX, moveY, accel, flightSpd);
 
 //Rotação
 image_angle = point_direction(x, y, mouse_x, mouse_y) - 90;
+
+//Faz o Objeto permanescer na tela
+move_wrap(true, true, sprite_width/2);

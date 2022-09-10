@@ -6,6 +6,7 @@
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":0,},
     {"id":{"name":"spr_enemy1","path":"sprites/spr_enemy1/spr_enemy1.yy",},"order":0,},
     {"id":{"name":"obj_rock","path":"objects/obj_rock/obj_rock.yy",},"order":0,},
+    {"id":{"name":"scr_playerMov","path":"scripts/scr_playerMov/scr_playerMov.yy",},"order":0,},
     {"id":{"name":"obj_player2","path":"objects/obj_player2/obj_player2.yy",},"order":1,},
     {"id":{"name":"spr_player1","path":"sprites/spr_player1/spr_player1.yy",},"order":0,},
     {"id":{"name":"spr_rock_large","path":"sprites/spr_rock_large/spr_rock_large.yy",},"order":0,},
