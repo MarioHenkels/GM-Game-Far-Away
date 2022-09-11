@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_bullet1",
-    "path": "sprites/spr_bullet1/spr_bullet1.yy",
+    "name": "spr_debris",
+    "path": "sprites/spr_debris/spr_debris.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,17 +23,16 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_rock","path":"objects/obj_rock/obj_rock.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "projectiles",
-    "path": "folders/Objects/projectiles.yy",
+    "name": "props",
+    "path": "folders/Objects/props.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_bullet1",
+  "name": "obj_debris",
   "tags": [],
   "resourceType": "GMObject",
 }
