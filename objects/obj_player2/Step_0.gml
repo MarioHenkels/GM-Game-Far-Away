@@ -14,6 +14,7 @@ var moveY = key_down - key_up;
 if(key_shoot) {
 	var bullet = instance_create_layer(x, y, "Bullets", bulletObj);
 	bullet.direction = image_angle + 90;
+	bullet.image_angle = image_angle;
 }
 
 handlePlayerMovement(moveX, moveY, accel, flightSpd);
