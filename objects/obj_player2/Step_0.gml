@@ -4,7 +4,9 @@ key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
 key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 
-key_shoot = mouse_check_button(mb_left) || keyboard_check_pressed(vk_space);
+key_shoot = mouse_check_button(mb_left)
+			|| mouse_check_button_pressed(mb_right)
+			|| keyboard_check_pressed(vk_space);
 
 //Calcular movimento
 var moveX = key_right - key_left;

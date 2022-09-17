@@ -31,7 +31,7 @@ if(ok_key) {
 }
 
 if(room == rm_arena1){
-	if(score >= 100000) {
+	if(score >= 1000) {
 		room_goto(rm_win);
 	}
 

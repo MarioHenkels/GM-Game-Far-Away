@@ -15,12 +15,6 @@ function handlePlayerMovement(moveX, moveY, accel, flightSpd){
 			motion_add(180, accel);
 			break;
 	}
-	
-	if(hspeed > flightSpd){
-	    hspeed = flightSpd;
-	} else if (hspeed < -flightSpd){
-	    hspeed = -flightSpd
-	}
 
 	switch(moveY) {
 	    case 1:
@@ -31,9 +25,9 @@ function handlePlayerMovement(moveX, moveY, accel, flightSpd){
 		    break;
 	}
 	
-	if(vspeed > flightSpd){
-	    vspeed = flightSpd;
-	} else if (vspeed < -flightSpd) {
-	    vspeed = -flightSpd
+	if(speed > flightSpd){
+	    speed = flightSpd;
+	} else if (speed < -flightSpd) {
+	    speed = -flightSpd
 	}
 }
