@@ -1,6 +1,8 @@
-if(room == rm_arena1) {
+if(room == rm_game) {
 	
-	repeat(10){
+	audio_play_sound(msc_8bitjam, 2, true);
+	
+	repeat(7){
 	
 		var xx = choose(
 			irandom_range(0, room_width*0.3),
@@ -15,6 +17,6 @@ if(room == rm_arena1) {
 		instance_create_layer(xx, yy, "Rocks", obj_rock)
 	}
 	
-	alarm[0] = 1*room_speed;
+	alarm[0] = 3*room_speed;
 }
 

@@ -4,9 +4,9 @@ key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
 key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 
-key_shoot = mouse_check_button(mb_left)
+key_shoot = mouse_check_button_pressed(mb_left)
 			|| mouse_check_button_pressed(mb_right)
-			|| keyboard_check_pressed(vk_space);
+			|| keyboard_check(vk_space);
 
 //Calcular movimento
 var moveX = key_right - key_left;
@@ -17,6 +17,7 @@ if(key_shoot) {
 	var bullet = instance_create_layer(x, y, "Bullets", bulletObj);
 	bullet.direction = image_angle + 90;
 	bullet.image_angle = image_angle;
+	audio_play_sound(sfx_shoot1, 3, false);
 }
 
 handlePlayerMovement(moveX, moveY, accel, flightSpd);

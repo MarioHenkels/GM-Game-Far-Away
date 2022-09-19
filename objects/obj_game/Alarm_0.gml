@@ -1,6 +1,6 @@
 /// @description Spawn Rocks
 
-if(room != rm_arena1){
+if(room != rm_game){
 	exit;
 }
 

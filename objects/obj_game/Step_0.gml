@@ -1,6 +1,5 @@
 ok_key = keyboard_check_pressed(vk_enter)
 			|| keyboard_check_pressed(vk_space)
-			|| mouse_check_button_pressed(mb_left);
 			
 exit_key = keyboard_check_pressed(vk_escape);
 
@@ -16,7 +15,7 @@ if(ok_key) {
 		
 		case rm_start:
 	
-			room_goto(rm_arena1);
+			room_goto(rm_game);
 	
 			break;
 			
@@ -30,8 +29,9 @@ if(ok_key) {
 
 }
 
-if(room == rm_arena1){
+if(room == rm_game){
 	if(score >= 1000) {
+		audio_play_sound(sfx_arp_up1, 1, false);
 		room_goto(rm_win);
 	}
 
