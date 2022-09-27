@@ -15,19 +15,26 @@ var moveY = key_down - key_up;
 
 if(key_shoot) {
 	var bullet = instance_create_layer(x, y, "Bullets", bulletObj);
-	bullet.direction = image_angle + 90;
+	bullet.direction = image_angle;
 	bullet.image_angle = image_angle;
 	audio_play_sound(sfx_shoot1, 3, false);
+}
+
+//Mudar sprite quando aperta R
+if(keyboard_check_pressed(ord("R"))) {
+	sprite_index = choose(spr_bug_blue, spr_bug_green, 
+					spr_bug_orange, spr_bug_purple, 
+					spr_bug_red);
 }
 
 handlePlayerMovement(moveX, moveY, accel, flightSpd);
 
 var trail = instance_create_layer(x, y, "Player", obj_debris);
 trail.speed = 0;
-trail.direction = image_angle + 90;
+trail.direction = image_angle;
 
 //Rotação
-image_angle = point_direction(x, y, mouse_x, mouse_y) - 90;
+image_angle = point_direction(x, y, mouse_x, mouse_y);
 
 //Faz o Objeto permanescer na tela
 move_wrap(true, true, sprite_width/2);
