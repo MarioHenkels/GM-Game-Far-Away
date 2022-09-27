@@ -22,9 +22,9 @@ if(key_shoot) {
 
 //Mudar sprite quando aperta R
 if(keyboard_check_pressed(ord("R"))) {
-	sprite_index = choose(spr_bug_blue, spr_bug_green, 
-					spr_bug_orange, spr_bug_purple, 
-					spr_bug_red);
+	sprite_index = choose(spr_moth_blue, spr_moth_green, 
+					spr_moth_orange, spr_moth_purple, 
+					spr_moth_red);
 }
 
 handlePlayerMovement(moveX, moveY, accel, flightSpd);

@@ -5,7 +5,7 @@ if(room != rm_game){
 }
 
 if(choose(true,false)){
-	//sideS
+	//sides
 	var xx = choose(0, room_width);
 	var yy = irandom_range(0, room_height);
 } else {

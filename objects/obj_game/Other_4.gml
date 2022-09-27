@@ -1,3 +1,4 @@
+//Spawns Rocks
 if(room == rm_game) {
 	
 	audio_play_sound(msc_8bitjam, 2, true);

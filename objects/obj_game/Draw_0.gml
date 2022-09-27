@@ -13,7 +13,7 @@ switch(room){
 		
         var c = c_yellow;
         draw_text_transformed_color(
-             room_width/2, 200, "FAR/AWAY", 5, 5, 0, c, c, c, c, 1
+             room_width/2, 100, "FAR/AWAY", 5, 5, 0, c, c, c, c, 1
         );
 		
 		draw_text(
