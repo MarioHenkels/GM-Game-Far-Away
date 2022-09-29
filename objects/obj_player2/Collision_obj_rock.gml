@@ -1,13 +1,16 @@
+if (!invincible) {
 	
-lives -= 1;
+	invincible = true;
 	
-if(lives <= 0) {
+	lives -= 1;
+	
+	alarm[0] = 3 * room_speed;
 	
 	audio_play_sound(sfx_explosion1, 1, false)
-		
-	room_goto(rm_gameover);
 	
-	repeat (20) {
-			instance_create_layer(x, y, "Rocks", obj_debris);
+	if(lives <= 0) {
+		repeat (20) {
+				instance_create_layer(x, y, "Rocks", obj_debris);
+		}
 	}
 }

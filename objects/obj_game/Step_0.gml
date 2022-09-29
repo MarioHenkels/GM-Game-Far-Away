@@ -4,9 +4,12 @@ ok_key = keyboard_check_pressed(vk_enter)
 			
 exit_key = keyboard_check_pressed(vk_escape);
 
+t_key = keyboard_check_pressed(ord("T"));
+
 if(exit_key) {
+}
 
-
+if(t_key) {
 
 }
 

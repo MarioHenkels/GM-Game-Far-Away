@@ -8,3 +8,5 @@ accel = 0.5;
 rockObj = obj_rock;
 
 bulletObj = obj_bullet1;
+
+invincible = false;

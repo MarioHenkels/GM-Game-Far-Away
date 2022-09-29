@@ -1,9 +1,9 @@
 //Spawns Rocks
 if(room == rm_game) {
 	
-	audio_play_sound(msc_8bitjam, 2, true);
+	audio_play_sound(msc_battle1_full, 2, true);
 	
-	repeat(7){
+	repeat(5){
 	
 		var xx = choose(
 			irandom_range(0, room_width*0.3),
