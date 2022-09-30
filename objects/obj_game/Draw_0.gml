@@ -2,8 +2,12 @@
 switch(room){
     case rm_game:
 
-        draw_text(20, 20, "SCORE: " + string(score));
-        draw_text(20, 40, "LIVES: " + string(lives));
+        draw_text(60, 20, "SCORE: " + string(score));
+        draw_text(60, 40, "LIVES: " + string(lives));
+		
+		draw_text(room_width/2, 20,
+			string(global.currentCounterNum) + "/" + 
+			string(global.targetCounterNum));
 
         break;
     case rm_start:

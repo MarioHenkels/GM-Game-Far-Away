@@ -17,6 +17,7 @@ if(key_shoot) {
 	var bullet = instance_create_layer(x, y, "Bullets", bulletObj);
 	bullet.direction = image_angle;
 	bullet.image_angle = image_angle;
+	bullet.speed = projectileSpeed;
 	audio_play_sound(sfx_shoot1, 3, false);
 }
 

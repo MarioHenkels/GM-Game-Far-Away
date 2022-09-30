@@ -1,5 +1,7 @@
 score += 10;
 
+global.currentCounterNum += 10;
+
 instance_destroy();
 
 with(other){

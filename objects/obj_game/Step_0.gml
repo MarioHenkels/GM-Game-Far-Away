@@ -34,7 +34,7 @@ if(ok_key) {
 }
 
 if(room == rm_game){
-	if(score >= 1000) {
+	if(global.currentCounterNum >= global.targetCounterNum) {
 		audio_play_sound(sfx_arp_up1, 1, false);
 		room_goto(rm_win);
 	}

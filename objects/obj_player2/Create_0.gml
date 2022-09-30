@@ -5,6 +5,8 @@ breakForce = 0.1;
 flightSpd = 4;
 accel = 0.5;
 
+projectileSpeed = 10;
+
 rockObj = obj_rock;
 
 bulletObj = obj_bullet1;
