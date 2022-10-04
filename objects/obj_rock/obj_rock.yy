@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_rock_medium",
-    "path": "sprites/spr_rock_medium/spr_rock_medium.yy",
+    "name": "spr_rock_md_grey",
+    "path": "sprites/spr_rock_md_grey/spr_rock_md_grey.yy",
   },
   "solid": false,
   "visible": true,

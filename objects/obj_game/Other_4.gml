@@ -5,6 +5,6 @@ if(room == rm_game) {
 	
 	spawnRandomly(obj_rock, 5, "Rocks");
 	
-	alarm[0] = 3*room_speed;
+	alarm[0] = 7*room_speed;
 }
 

@@ -6,6 +6,8 @@ exit_key = keyboard_check_pressed(vk_escape);
 
 t_key = keyboard_check_pressed(ord("T"));
 
+show_debug_message(ds_list_size(global.allEnemies)); //TODO - remover
+
 if(exit_key) {
 }
 

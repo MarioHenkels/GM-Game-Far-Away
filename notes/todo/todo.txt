@@ -1,0 +1,1 @@
+ - Arrumar ds_list allEnemies = instâncias eliminadas não são removidas da lista

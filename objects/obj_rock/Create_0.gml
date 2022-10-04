@@ -1,9 +1,8 @@
 
-sprite_index = choose(
-spr_rock_small,
-spr_rock_medium,
-spr_rock_large
-);
+sprSize = choose(0, 1, 2);
+sprColor = choose(0, 1, 2);
+
+sprite_index = getRockSprBySizeAndColor(sprSize, sprColor);
 
 direction = irandom_range(0, 359);
 image_angle = irandom_range(0, 359);
