@@ -18,8 +18,7 @@ function spawnRandomlyBorders(object, quantity, layer){
 			var yy = choose(-padding, room_height + padding);
 		}
 
-		var newInstance = instance_create_layer(xx, yy, layer, object)
-		ds_list_add(global.allEnemies, newInstance);
+		instance_create_layer(xx, yy, layer, object)
 	}
 }
 
@@ -42,8 +41,7 @@ function spawnRandomly(object, quantity, layer){
 			irandom_range(room_height*0.7, room_height)
 		);
 
-		var newInstance = instance_create_layer(xx, yy, layer, object)
-		ds_list_add(global.allEnemies, newInstance);
+		instance_create_layer(xx, yy, layer, object)
 	}
 }
 

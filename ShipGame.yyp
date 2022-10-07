@@ -21,6 +21,7 @@
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},"order":1,},
     {"id":{"name":"obj_rock","path":"objects/obj_rock/obj_rock.yy",},"order":0,},
     {"id":{"name":"spr_moth_green","path":"sprites/spr_moth_green/spr_moth_green.yy",},"order":7,},
+    {"id":{"name":"scr_enemyUtils","path":"scripts/scr_enemyUtils/scr_enemyUtils.yy",},"order":3,},
     {"id":{"name":"spr_rock_lg_blue","path":"sprites/spr_rock_lg_blue/spr_rock_lg_blue.yy",},"order":5,},
     {"id":{"name":"spr_moth_grey","path":"sprites/spr_moth_grey/spr_moth_grey.yy",},"order":11,},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},"order":9,},

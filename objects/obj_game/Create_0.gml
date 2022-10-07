@@ -8,6 +8,6 @@ global.lgRockCounterVal = 10;
 global.mdRockCounterVal = 5;
 global.smRockCounterVal = 1;
 
-global.allEnemies = ds_list_create();
+global.allEnemies = [];
 
 draw_set_font(fnt_text);

@@ -7,8 +7,6 @@ accel = 0.5;
 
 projectileSpeed = 10;
 
-rockObj = obj_rock;
-
 bulletObj = obj_bullet1;
 
-invincible = false;
+invincible = true;

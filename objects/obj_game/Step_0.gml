@@ -6,14 +6,14 @@ exit_key = keyboard_check_pressed(vk_escape);
 
 t_key = keyboard_check_pressed(ord("T"));
 
-show_debug_message(ds_list_size(global.allEnemies)); //TODO - remover
-
 if(exit_key) {
 }
 
 if(t_key) {
-
 }
+
+show_debug_message("Rocks in Layer: " + string(array_length(layer_get_all_elements("Rocks"))));
+show_debug_message("Rocks in List: " + string(array_length(getAllInstancesByLayer("Rocks"))));
 
 if(ok_key) {
 
