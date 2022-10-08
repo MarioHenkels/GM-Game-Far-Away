@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "enemies",
-    "path": "folders/Sprites/enemies.yy",
+    "name": "moth",
+    "path": "folders/Sprites/enemies/moth.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_moth_grey",

@@ -1,3 +1,12 @@
+
+///@function							handleCollisionBulletEnemy()
+
+function handleCollisionBulletEnemy() {
+	instance_destroy();
+}
+
+///@function							handleCollisionBulletRock()
+
 function handleCollisionBulletRock(){
 	
 	instance_destroy();

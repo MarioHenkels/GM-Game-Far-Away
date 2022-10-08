@@ -1,8 +1,8 @@
 
 sprSize = choose(0, 1, 2);		//0: small, 1: medium, 2: large
 sprColor = choose(0, 1, 2);		//0: grey, 1: blue, 2: red
-prevSprColor = sprSize;
-prevSprSize = sprColor;
+prevSprColor = sprColor;
+prevSprSize = sprSize;
 
 sprite_index = getRockSprBySizeAndColor(sprSize, sprColor);
 

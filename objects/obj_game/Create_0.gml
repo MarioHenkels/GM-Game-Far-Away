@@ -2,7 +2,7 @@ score = 0;
 lives = 3;
 
 global.currentCounterNum = 0;
-global.targetCounterNum = 1000;
+global.targetCounterNum = 400;
 
 global.lgRockCounterVal = 10;
 global.mdRockCounterVal = 5;

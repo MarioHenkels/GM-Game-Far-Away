@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "enemies",
-    "path": "folders/Sprites/enemies.yy",
+    "name": "bug",
+    "path": "folders/Sprites/enemies/bug.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_bug_green",
