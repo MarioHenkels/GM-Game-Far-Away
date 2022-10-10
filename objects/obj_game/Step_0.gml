@@ -6,6 +6,11 @@ exit_key = keyboard_check_pressed(vk_escape);
 
 t_key = keyboard_check_pressed(ord("T"));
 
+f1 = keyboard_check_pressed(vk_f1);
+f2 = keyboard_check_pressed(vk_f2);
+f3 = keyboard_check_pressed(vk_f3);
+f4 = keyboard_check_pressed(vk_f4);
+
 if(exit_key) {
 }
 
