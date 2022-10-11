@@ -10,6 +10,9 @@ if(exit_key) {
 }
 
 if(t_key) {
+	
+	instance_create_layer(room_width/2, room_height/2, "PassiveMobs", obj_caterpillar);
+	
 }
 
 show_debug_message("Rocks in Layer: " + string(array_length(layer_get_all_elements("Rocks"))));

@@ -5,4 +5,3 @@ if(room == rm_game) {
 	
 	alarm[0] = 7*room_speed;
 }
-
