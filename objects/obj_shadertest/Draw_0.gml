@@ -1,3 +1,3 @@
 
+setColor(currentColor);
 
-setColor(colorNames.blue);

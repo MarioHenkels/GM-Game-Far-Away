@@ -5,9 +5,9 @@ varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
 uniform float range;
-uniform vec4 colorMatch1;	//cor luz
-uniform vec4 colorMatch2;	//cor base
-uniform vec4 colorMatch3;	//cor sombra
+uniform vec4 colorMatch1;
+uniform vec4 colorMatch2;
+uniform vec4 colorMatch3;
 uniform vec4 colorReplace1;
 uniform vec4 colorReplace2;
 uniform vec4 colorReplace3;
