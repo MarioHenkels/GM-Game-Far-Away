@@ -1,6 +1,6 @@
 /// @description Spawn Enemies
 
-object = choose(obj_rock, obj_bomb);
+object = choose(obj_rock);
 
 if(room != rm_game){
 	exit;

@@ -1,6 +1,8 @@
 {
   "resources": [
     {"id":{"name":"spr_bug_green","path":"sprites/spr_bug_green/spr_bug_green.yy",},"order":1,},
+    {"id":{"name":"scr_colors","path":"scripts/scr_colors/scr_colors.yy",},"order":6,},
+    {"id":{"name":"sh_replaceColor","path":"shaders/sh_replaceColor/sh_replaceColor.yy",},"order":0,},
     {"id":{"name":"fnt_text","path":"fonts/fnt_text/fnt_text.yy",},"order":0,},
     {"id":{"name":"sfx_shoot1","path":"sounds/sfx_shoot1/sfx_shoot1.yy",},"order":4,},
     {"id":{"name":"scr_collisionFunctions","path":"scripts/scr_collisionFunctions/scr_collisionFunctions.yy",},"order":2,},
@@ -30,6 +32,7 @@
     {"id":{"name":"obj_spike","path":"objects/obj_spike/obj_spike.yy",},"order":1,},
     {"id":{"name":"obj_music_controller","path":"objects/obj_music_controller/obj_music_controller.yy",},"order":11,},
     {"id":{"name":"spr_caterpillar_b1","path":"sprites/spr_caterpillar_b1/spr_caterpillar_b1.yy",},"order":1,},
+    {"id":{"name":"scr_shaderUtils","path":"scripts/scr_shaderUtils/scr_shaderUtils.yy",},"order":5,},
     {"id":{"name":"msc_battle1_turbo","path":"sounds/msc_battle1_turbo/msc_battle1_turbo.yy",},"order":4,},
     {"id":{"name":"spr_caterpillar_b4","path":"sprites/spr_caterpillar_b4/spr_caterpillar_b4.yy",},"order":4,},
     {"id":{"name":"spr_moth_grey","path":"sprites/spr_moth_grey/spr_moth_grey.yy",},"order":2,},
@@ -49,6 +52,7 @@
     {"id":{"name":"spr_moth_purple","path":"sprites/spr_moth_purple/spr_moth_purple.yy",},"order":4,},
     {"id":{"name":"rm_gameover","path":"rooms/rm_gameover/rm_gameover.yy",},"order":3,},
     {"id":{"name":"spr_rock_lg_grey","path":"sprites/spr_rock_lg_grey/spr_rock_lg_grey.yy",},"order":0,},
+    {"id":{"name":"obj_shaderTest","path":"objects/obj_shaderTest/obj_shaderTest.yy",},"order":0,},
     {"id":{"name":"rm_win","path":"rooms/rm_win/rm_win.yy",},"order":2,},
     {"id":{"name":"msc_battle1_full","path":"sounds/msc_battle1_full/msc_battle1_full.yy",},"order":0,},
     {"id":{"name":"spr_rock_lg_red","path":"sprites/spr_rock_lg_red/spr_rock_lg_red.yy",},"order":10,},
@@ -114,6 +118,7 @@
     {"folderPath":"folders/Sprites/enemies/moth.yy","order":13,"resourceVersion":"1.0","name":"moth","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/enemies/caterpillar.yy","order":14,"resourceVersion":"1.0","name":"caterpillar","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/enemies/bomb.yy","order":15,"resourceVersion":"1.0","name":"bomb","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/test.yy","order":12,"resourceVersion":"1.0","name":"test","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

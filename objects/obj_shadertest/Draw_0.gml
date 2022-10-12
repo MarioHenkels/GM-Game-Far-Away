@@ -1,0 +1,3 @@
+
+
+setColor(colorNames.blue);
