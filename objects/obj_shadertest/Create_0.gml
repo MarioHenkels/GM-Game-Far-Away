@@ -1,1 +1,1 @@
-currentColor = colorNames.blue;
+currentColor = colorNames.orange;
