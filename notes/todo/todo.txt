@@ -1,4 +1,6 @@
 Terminar Caterpillar
+
 Terminar Implementação de Shaders
+Implementar Shaders com obj_rock
 
 Terminar Mina

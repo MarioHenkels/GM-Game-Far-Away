@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_spike_orange",
-    "path": "sprites/spr_spike_orange/spr_spike_orange.yy",
+    "name": "spr_spike",
+    "path": "sprites/spr_spike/spr_spike.yy",
   },
   "solid": false,
   "visible": true,

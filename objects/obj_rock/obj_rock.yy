@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_rock_md_grey",
-    "path": "sprites/spr_rock_md_grey/spr_rock_md_grey.yy",
+    "name": "spr_rock_lg",
+    "path": "sprites/spr_rock_lg/spr_rock_lg.yy",
   },
   "solid": false,
   "visible": true,
@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "props",
-    "path": "folders/Objects/props.yy",
+    "name": "rocks",
+    "path": "folders/Objects/rocks.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_rock",
