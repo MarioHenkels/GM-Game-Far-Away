@@ -45,52 +45,23 @@ function spawnRandomly(object, quantity, layer){
 	}
 }
 
-///@function						getRockSprBySizeAndColor(size)
-///@param {int} size				O tamanho da rock a ser spawnada (0 small, 1 medium, 2 large)
-///@param {int} color				A cor da rock a ser spawnada (0 grey, 1 blue, 2 red)
-///@return {sprite} sprite_index	O Sprite a ser retornado
+///@function						getRockSpriteBySize(size)
+///@param {sizes.<size>} size		O tamanho do objeto
 
-function getRockSprBySizeAndColor(size, color) {
+function getRockSpriteBySize(size){
 
 	switch(size){
-		case 0: //small
-			switch(color){
-				case 0: //grey
-					return spr_rock_sm_grey;
-					break;
-				case 1: //blue
-					return spr_rock_sm_blue;
-					break;
-				case 2: //red
-					return spr_rock_sm_red;
-					break;
-			}
+		case sizes.sm:
+			return spr_rock_sm;
 			break;
-		case 1: //medium
-			switch(color){
-				case 0: //grey
-					return spr_rock_md_grey;
-					break;
-				case 1: //blue
-					return spr_rock_md_blue;
-					break;
-				case 2: //red
-					return spr_rock_md_red;
-					break;
-			}
+		
+		case sizes.md:
+			return spr_rock_md;
 			break;
-		case 2: //large
-			switch(color){
-				case 0: //grey
-					return spr_rock_lg_grey;
-					break;
-				case 1: //blue
-					return spr_rock_lg_blue;
-					break;
-				case 2: //red
-					return spr_rock_lg_red;
-					break;
-			}
+			
+		case sizes.lg:
+			return spr_rock_lg;
 			break;
 	}
+
 }

@@ -1,4 +1,12 @@
 
+//Nomes das cores possíveis para sprites
+enum sizes
+{
+	lg,
+	md,
+	sm
+}
+
 ///@function							getAllInstancesByLayer(layerId)
 ///@param {layer_id} layerId	O id ou nome do layer
 

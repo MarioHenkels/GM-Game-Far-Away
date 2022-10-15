@@ -6,35 +6,35 @@ function setColor(color){
 
 	switch(color){
 		
-		case colorNames.blue:
+		case colors.blue:
 			light = blue_light;
 			base = blue_base;
 			dark = blue_dark;
 			replaceColor(light, base, dark);
 			break;
 		
-		case colorNames.red:
+		case colors.red:
 			light = red_light;
 			base = red_base;
 			dark = red_dark;
 			replaceColor(light, base, dark);
 			break;
 		
-		case colorNames.purple:
+		case colors.purple:
 			light = purple_light;
 			base = purple_base;
 			dark = purple_dark;
 			replaceColor(light, base, dark);
 			break;
 		
-		case colorNames.orange:
+		case colors.orange:
 			light = orange_light;
 			base = orange_base;
 			dark = orange_dark;
 			replaceColor(light, base, dark);
 			break;
 		
-		case colorNames.green:
+		case colors.green:
 			light = green_light;
 			base = green_base;
 			dark = green_dark;

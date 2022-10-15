@@ -1,10 +1,10 @@
 
-sprSize = choose(0, 1, 2);		//0: small, 1: medium, 2: large
-sprColor = choose(0, 1, 2);		//0: grey, 1: blue, 2: red
+sprSize = choose(sizes.sm, sizes.md, sizes.lg);
+sprColor = choose(colors.grey, colors.blue, colors.red);
 prevSprColor = sprColor;
 prevSprSize = sprSize;
 
-sprite_index = getRockSprBySizeAndColor(sprSize, sprColor);
+sprite_index = getRockSpriteBySize(sprSize);
 
 direction = irandom_range(0, 359);
 image_angle = irandom_range(0, 359);

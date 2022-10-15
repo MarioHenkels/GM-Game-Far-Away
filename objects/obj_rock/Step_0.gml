@@ -1,10 +1,6 @@
 
 image_angle += spinSpd * spinDir;
 
-if(sprSize != prevSprSize || sprColor != prevSprColor){
-	sprite_index = getRockSprBySizeAndColor(sprSize, sprColor);	
-}
-
 prevSprColor = sprColor;
 prevSprSize = sprSize;
 

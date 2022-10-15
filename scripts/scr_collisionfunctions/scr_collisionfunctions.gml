@@ -13,99 +13,99 @@ function handleCollisionBulletRock(){
 	
 	switch(sprSize){
 		
-		case 0: //small
+		case sizes.sm: //small
 			switch(sprColor){
-				case 0: //grey
+				case colors.grey: //grey
 					score += 11;
 					break;
 					
-				case 1: //blue
+				case colors.blue: //blue
 					score += 10;
 					global.currentCounterNum += global.smRockCounterVal;
 					break;
 					
-				case 2: //red
+				case colors.red: //red
 					score += 10;
 					global.currentCounterNum -= global.smRockCounterVal;
 					break;
 			}
 			break;
 			
-		case 1: //medium
+		case sizes.md: //medium
 			switch(sprColor){
 				
-				case 0: //grey
+				case colors.grey: //grey
 					score += 11;
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
-						newRock.sprColor = 0;
-						newRock.sprSize = 0;
-						newRock.sprite_index = spr_rock_sm_grey;
+						newRock.sprColor = sprColor;
+						newRock.sprSize = sizes.sm;
+						newRock.sprite_index = spr_rock_sm;
 					}
 					break;
 					
-				case 1: //blue
+				case colors.blue: //blue
 					score += 10;
 					global.currentCounterNum += global.mdRockCounterVal;
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
-						newRock.sprColor = 1;
-						newRock.sprSize = 0;
-						newRock.sprite_index = spr_rock_sm_blue;
+						newRock.sprColor = sprColor;
+						newRock.sprSize = sizes.sm;
+						newRock.sprite_index = spr_rock_sm;
 					}
 					break;
 					
-				case 2: //red
+				case colors.red: //red
 					score += 10;
 					global.currentCounterNum -= global.mdRockCounterVal;
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
-						newRock.sprColor = 2;
-						newRock.sprSize = 0;
-						newRock.sprite_index = spr_rock_sm_red;
+						newRock.sprColor = sprColor;
+						newRock.sprSize = sizes.sm;
+						newRock.sprite_index = spr_rock_sm;
 					}
 					break;
 			}
 			break;
 				
-		case 2: //large
+		case sizes.lg: //large
 			switch(sprColor){
 				
-				case 0: //grey
+				case colors.grey: //grey
 					score += 11;
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
 						newRock.sprColor = 0;
 						newRock.sprSize = 1;
-						newRock.sprite_index = spr_rock_md_grey;
+						newRock.sprite_index = spr_rock_md;
 					}
 					break;
 					
-				case 1: //blue
+				case colors.blue: //blue
 					score += 10;
 					global.currentCounterNum += global.lgRockCounterVal;
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
-						newRock.sprColor = 1;
-						newRock.sprSize = 1;
-						newRock.sprite_index = spr_rock_md_blue;
+						newRock.sprColor = sprColor;
+						newRock.sprSize = sizes.md;
+						newRock.sprite_index = spr_rock_md;
 					}
 					break;
-					
-				case 2: //red
+				
+				case colors.red: //red
 					score += 10;
 					global.currentCounterNum -= global.lgRockCounterVal;
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
-						newRock.sprColor = 2;
-						newRock.sprSize = 1;
-						newRock.sprite_index = spr_rock_md_red;
+						newRock.sprColor = sprColor;
+						newRock.sprSize = sizes.md;
+						newRock.sprite_index = spr_rock_md;
 					}
 					break;
 			}

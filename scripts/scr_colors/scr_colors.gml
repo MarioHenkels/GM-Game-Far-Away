@@ -10,7 +10,7 @@ global.Color = function(r, g, b) constructor {
 }
 
 //Nomes das cores possíveis para sprites
-enum colorNames
+enum colors
 {
 	grey,
     blue,
