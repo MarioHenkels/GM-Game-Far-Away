@@ -60,18 +60,22 @@ function replaceColor(colorLight, colorBase, colorDark){
 	colorMatch1 = grey_light;
 	colorMatch2 = grey_base;
 	colorMatch3 = grey_dark;
+	colorMatch4 = white_override;
 	
 	colorReplace1 = colorLight;
 	colorReplace2 = colorBase;
 	colorReplace3 = colorDark;
+	colorReplace4 = white;
 
 	sh_handle_range = shader_get_uniform(sh_replaceColor, "range");
 	sh_handle_match_1 = shader_get_uniform(sh_replaceColor, "colorMatch1");
 	sh_handle_match_2 = shader_get_uniform(sh_replaceColor, "colorMatch2");
 	sh_handle_match_3 = shader_get_uniform(sh_replaceColor, "colorMatch3");
+	sh_handle_match_4 = shader_get_uniform(sh_replaceColor, "colorMatch4");
 	sh_handle_replace_1 = shader_get_uniform(sh_replaceColor, "colorReplace1");
 	sh_handle_replace_2 = shader_get_uniform(sh_replaceColor, "colorReplace2");
 	sh_handle_replace_3 = shader_get_uniform(sh_replaceColor, "colorReplace3");
+	sh_handle_replace_4 = shader_get_uniform(sh_replaceColor, "colorReplace4");
 
 	shader_set(sh_replaceColor);
 
@@ -95,6 +99,12 @@ function replaceColor(colorLight, colorBase, colorDark){
 		colorMatch3.toShaderVal(colorMatch3.green),
 		colorMatch3.toShaderVal(colorMatch3.blue)
 	);
+	shader_set_uniform_f(
+		sh_handle_match_4,
+		colorMatch4.toShaderVal(colorMatch4.red),
+		colorMatch4.toShaderVal(colorMatch4.green),
+		colorMatch4.toShaderVal(colorMatch4.blue)
+	);
 
 	shader_set_uniform_f(
 		sh_handle_replace_1,
@@ -113,6 +123,12 @@ function replaceColor(colorLight, colorBase, colorDark){
 		colorReplace3.toShaderVal(colorReplace3.red),
 		colorReplace3.toShaderVal(colorReplace3.green),
 		colorReplace3.toShaderVal(colorReplace3.blue)
+	);
+	shader_set_uniform_f(
+		sh_handle_replace_4,
+		colorReplace4.toShaderVal(colorReplace4.red),
+		colorReplace4.toShaderVal(colorReplace4.green),
+		colorReplace4.toShaderVal(colorReplace4.blue)
 	);
 
 	draw_self();

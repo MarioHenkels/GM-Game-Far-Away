@@ -20,6 +20,10 @@ enum colors
     green
 }
 
+//CORES OVERRIDE
+#macro white_override new global.Color(255, 0, 64);
+#macro white new global.Color(255, 255, 255);
+
 //CORES SPRITE CINZA
 #macro grey_light new global.Color(255, 255, 255);
 #macro grey_base new global.Color(146, 161, 185);

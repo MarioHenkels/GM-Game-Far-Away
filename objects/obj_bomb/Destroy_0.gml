@@ -1,3 +1,4 @@
+audio_play_sound(sfx_damage1, 3, false);
 
 var newSpike = instance_create_layer(x, y, "Rocks", obj_spike);
 newSpike.direction = image_angle;
