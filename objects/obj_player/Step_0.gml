@@ -4,36 +4,40 @@ key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
 key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 
-key_shoot = keyboard_check_pressed(vk_space);
+key_special = keyboard_check_pressed(ord("R"));
+
+key_shoot = mouse_check_button_pressed(mb_left)
+			|| mouse_check_button_pressed(mb_right)
+			|| keyboard_check(vk_space);
 
 //Calcular movimento
 var moveX = key_right - key_left;
 
 var moveY = key_down - key_up;
 
-hsp = moveX * flightSpd;
-vsp = moveY * flightSpd;
-
-//Colisão Horizontal
-if(place_meeting(x + hsp, y, obj_wall)) {
-
-    while(!place_meeting(x+sign(hsp), y, obj_wall)){
-        x += sign(hsp);
-    }
-    hsp = 0;
-}
-//Colisão Vertical
-if(place_meeting(x, y + vsp, obj_wall)){
-    
-    while(!place_meeting(x, y + sign(vsp), obj_wall)){
-        y += sign(vsp);
-    }
-    vsp = 0;
+//Shoot
+if(key_shoot) {
+	var bullet = instance_create_layer(x, y, "Bullets", bulletObj);
+	bullet.direction = image_angle;
+	bullet.image_angle = image_angle;
+	bullet.speed = projectileSpeed;
+	audio_play_sound(sfx_shoot1, 3, false);
 }
 
-//Passa o movimento para o Objeto em si
-x += hsp;
-y += vsp;
+//Special
+if(key_special){
+	specialSwitchColor(getAllInstancesByLayer("Rocks"));
+}
+
+handlePlayerMovement(moveX, moveY, accel, flightSpd);
+
+var trail = instance_create_layer(x, y, "Effects", obj_debris);
+trail.sprColor = sprColor;
+trail.speed = 0;
+trail.direction = image_angle;
 
 //Rotação
-image_angle = point_direction(x, y, mouse_x, mouse_y) - 90;
+image_angle = point_direction(x, y, mouse_x, mouse_y);
+
+//Faz o Objeto permanescer na tela
+move_wrap(true, true, sprite_width/2);

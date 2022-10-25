@@ -1,4 +1,6 @@
 
+sprColor = choose(colors.blue, colors.red, colors.grey);
+
 direction = irandom_range(0, 359);
 image_angle = irandom_range(0, 359);
 speed = random_range(0, 3);

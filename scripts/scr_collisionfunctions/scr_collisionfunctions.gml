@@ -3,6 +3,70 @@
 
 function handleCollisionBulletEnemy() {
 	instance_destroy();
+	
+	switch(sprSize){
+		
+		case sizes.sm: //small
+			switch(sprColor){
+				case colors.grey: //grey
+					score += 11;
+					break;
+					
+				case colors.blue: //blue
+					score += 10;
+					global.currentCounterNum += global.smRockCounterVal;
+					break;
+					
+				case colors.red: //red
+					score += 10;
+					global.currentCounterNum -= global.smRockCounterVal;
+					break;
+			}
+			break;
+			
+		case sizes.md: //medium
+			switch(sprColor){
+				
+				case colors.grey: //grey
+					score += 11;
+					break;
+					
+				case colors.blue: //blue
+					score += 10;
+					global.currentCounterNum += global.mdRockCounterVal;
+					break;
+					
+				case colors.red: //red
+					score += 10;
+					global.currentCounterNum -= global.mdRockCounterVal;
+					break;
+			}
+			break;
+				
+		case sizes.lg: //large
+			switch(sprColor){
+				
+				case colors.grey: //grey
+					score += 11;
+					break;
+					
+				case colors.blue: //blue
+					score += 10;
+					global.currentCounterNum += global.lgRockCounterVal;
+					break;
+				
+				case colors.red: //red
+					score += 10;
+					global.currentCounterNum -= global.lgRockCounterVal;
+					break;
+			}
+			break;
+	}
+	
+	repeat (20) {
+		var newDebris = instance_create_layer(x, y, "Effects", obj_debris);
+		newDebris.sprColor = sprColor;
+	}
 }
 
 ///@function							handleCollisionBulletRock()
@@ -113,6 +177,7 @@ function handleCollisionBulletRock(){
 	}
 	
 	repeat (20) {
-		instance_create_layer(x, y, "Effects", obj_debris);
+		var newDebris = instance_create_layer(x, y, "Effects", obj_debris);
+		newDebris.sprColor = sprColor;
 	}
 }
