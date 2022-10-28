@@ -26,12 +26,13 @@ if(key_shoot) {
 
 //Special
 if(key_special){
-	specialSwitchColor(getAllInstancesByLayer("Rocks"));
+	specialSwitchColor(getAllInstancesByLayer("Enemies"));
 }
 
 handlePlayerMovement(moveX, moveY, accel, flightSpd);
 
 var trail = instance_create_layer(x, y, "Effects", obj_debris);
+trail.falloff = 0.03;
 trail.sprColor = sprColor;
 trail.speed = 0;
 trail.direction = image_angle;

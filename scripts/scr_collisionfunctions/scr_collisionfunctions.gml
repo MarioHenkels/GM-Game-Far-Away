@@ -62,11 +62,6 @@ function handleCollisionBulletEnemy() {
 			}
 			break;
 	}
-	
-	repeat (20) {
-		var newDebris = instance_create_layer(x, y, "Effects", obj_debris);
-		newDebris.sprColor = sprColor;
-	}
 }
 
 ///@function							handleCollisionBulletRock()
@@ -102,7 +97,7 @@ function handleCollisionBulletRock(){
 					score += 11;
 				
 					repeat(2) {
-						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
+						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);
 						newRock.sprColor = sprColor;
 						newRock.sprSize = sizes.sm;
 						newRock.sprite_index = spr_rock_sm;
@@ -114,7 +109,7 @@ function handleCollisionBulletRock(){
 					global.currentCounterNum += global.mdRockCounterVal;
 				
 					repeat(2) {
-						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
+						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);
 						newRock.sprColor = sprColor;
 						newRock.sprSize = sizes.sm;
 						newRock.sprite_index = spr_rock_sm;
@@ -126,7 +121,7 @@ function handleCollisionBulletRock(){
 					global.currentCounterNum -= global.mdRockCounterVal;
 				
 					repeat(2) {
-						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
+						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);
 						newRock.sprColor = sprColor;
 						newRock.sprSize = sizes.sm;
 						newRock.sprite_index = spr_rock_sm;
@@ -142,7 +137,7 @@ function handleCollisionBulletRock(){
 					score += 11;
 				
 					repeat(2) {
-						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
+						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);
 						newRock.sprColor = 0;
 						newRock.sprSize = 1;
 						newRock.sprite_index = spr_rock_md;
@@ -154,7 +149,7 @@ function handleCollisionBulletRock(){
 					global.currentCounterNum += global.lgRockCounterVal;
 				
 					repeat(2) {
-						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
+						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);
 						newRock.sprColor = sprColor;
 						newRock.sprSize = sizes.md;
 						newRock.sprite_index = spr_rock_md;
@@ -166,7 +161,7 @@ function handleCollisionBulletRock(){
 					global.currentCounterNum -= global.lgRockCounterVal;
 				
 					repeat(2) {
-						var newRock = instance_create_layer(x, y, "Rocks", obj_rock);
+						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);
 						newRock.sprColor = sprColor;
 						newRock.sprSize = sizes.md;
 						newRock.sprite_index = spr_rock_md;
@@ -174,10 +169,5 @@ function handleCollisionBulletRock(){
 					break;
 			}
 			break;
-	}
-	
-	repeat (20) {
-		var newDebris = instance_create_layer(x, y, "Effects", obj_debris);
-		newDebris.sprColor = sprColor;
 	}
 }
