@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "colors & shaders",
+    "path": "folders/Scripts/colors & shaders.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_colors",

@@ -14,12 +14,12 @@ function handleCollisionBulletEnemy() {
 					
 				case colors.blue: //blue
 					score += 10;
-					global.currentCounterNum += global.smRockCounterVal;
+					global.currentCounterNum += global.mdEnemyCounterVal;
 					break;
 					
 				case colors.red: //red
 					score += 10;
-					global.currentCounterNum -= global.smRockCounterVal;
+					global.currentCounterNum -= global.mdEnemyCounterVal;
 					break;
 			}
 			break;
@@ -33,12 +33,12 @@ function handleCollisionBulletEnemy() {
 					
 				case colors.blue: //blue
 					score += 10;
-					global.currentCounterNum += global.mdRockCounterVal;
+					global.currentCounterNum += global.mdEnemyCounterVal;
 					break;
 					
 				case colors.red: //red
 					score += 10;
-					global.currentCounterNum -= global.mdRockCounterVal;
+					global.currentCounterNum -= global.mdEnemyCounterVal;
 					break;
 			}
 			break;
@@ -52,12 +52,12 @@ function handleCollisionBulletEnemy() {
 					
 				case colors.blue: //blue
 					score += 10;
-					global.currentCounterNum += global.lgRockCounterVal;
+					global.currentCounterNum += global.lgEnemyCounterVal;
 					break;
 				
 				case colors.red: //red
 					score += 10;
-					global.currentCounterNum -= global.lgRockCounterVal;
+					global.currentCounterNum -= global.lgEnemyCounterVal;
 					break;
 			}
 			break;
@@ -80,12 +80,12 @@ function handleCollisionBulletRock(){
 					
 				case colors.blue: //blue
 					score += 10;
-					global.currentCounterNum += global.smRockCounterVal;
+					global.currentCounterNum += global.mdEnemyCounterVal;
 					break;
 					
 				case colors.red: //red
 					score += 10;
-					global.currentCounterNum -= global.smRockCounterVal;
+					global.currentCounterNum -= global.mdEnemyCounterVal;
 					break;
 			}
 			break;
@@ -106,7 +106,7 @@ function handleCollisionBulletRock(){
 					
 				case colors.blue: //blue
 					score += 10;
-					global.currentCounterNum += global.mdRockCounterVal;
+					global.currentCounterNum += global.mdEnemyCounterVal;
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);
@@ -118,7 +118,7 @@ function handleCollisionBulletRock(){
 					
 				case colors.red: //red
 					score += 10;
-					global.currentCounterNum -= global.mdRockCounterVal;
+					global.currentCounterNum -= global.mdEnemyCounterVal;
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);
@@ -146,7 +146,7 @@ function handleCollisionBulletRock(){
 					
 				case colors.blue: //blue
 					score += 10;
-					global.currentCounterNum += global.lgRockCounterVal;
+					global.currentCounterNum += global.lgEnemyCounterVal;
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);
@@ -158,7 +158,7 @@ function handleCollisionBulletRock(){
 				
 				case colors.red: //red
 					score += 10;
-					global.currentCounterNum -= global.lgRockCounterVal;
+					global.currentCounterNum -= global.lgEnemyCounterVal;
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);

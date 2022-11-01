@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "enemies & spawning",
-    "path": "folders/Scripts/enemies & spawning.yy",
+    "name": "menus & GUI",
+    "path": "folders/Scripts/menus & GUI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_collisionFunctions",
+  "name": "scr_menuUtils",
   "tags": [],
   "resourceType": "GMScript",
 }
