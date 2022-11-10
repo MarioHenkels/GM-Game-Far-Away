@@ -1,24 +1,16 @@
 
-ok_key = keyboard_check_pressed(vk_enter)
-			|| keyboard_check_pressed(vk_space)
+key_enter = keyboard_check_pressed(vk_enter)
 			
-exit_key = keyboard_check_pressed(vk_escape);
+key_back = keyboard_check_pressed(vk_escape);
 
-t_key = keyboard_check_pressed(ord("T"));
-
-if(exit_key) {
-}
-
-if(t_key) {
-	
-	instance_create_layer(room_width/2, room_height/2, "PassiveMobs", obj_caterpillar);
-	
+if(key_back) {
+	global.pause = !global.pause;
 }
 
 show_debug_message("Rocks in Layer: " + string(array_length(layer_get_all_elements("Enemies"))));
 show_debug_message("Rocks in List: " + string(array_length(getAllInstancesByLayer("Enemies"))));
 
-if(ok_key) {
+if(key_enter) {
 
 	switch(room){
 		

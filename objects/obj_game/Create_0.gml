@@ -25,9 +25,9 @@ display_set_gui_size(global.view_width, global.view_height);
 global.key_enter	= vk_space;
 global.key_back		= vk_escape;
 global.key_up		= ord("W");
-global.key_down		= ord("W");
-global.key_left		= ord("W");
-global.key_right	= ord("W");
+global.key_down		= ord("S");
+global.key_left		= ord("A");
+global.key_right	= ord("D");
 global.key_shoot	= mb_left;
 global.key_skill	= mb_right;
 
