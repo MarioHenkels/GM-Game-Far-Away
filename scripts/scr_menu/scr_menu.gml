@@ -41,7 +41,7 @@ ds_options = create_menu_page(
 	["AUDIO",		menu_element_type.page_transfer,		menu_page.audio],
 	["DIFFICULTY",	menu_element_type.page_transfer,		menu_page.difficulty],
 	["CONTROLS",	menu_element_type.page_transfer,		menu_page.controls],
-	["BACK",		menu_element_type.page_transfer,		"returnMenu"]
+	["BACK",		menu_element_type.page_transfer,		menu_page.main]
 );
 //OPÇÕES DE AUDIO
 ds_audio = create_menu_page(

@@ -31,17 +31,17 @@ var lty;
 
 var yy = 0;
 repeat(ds_height){
-	var slColor = c_white;
+	var c = c_white;
 	var xOffset = 0;
 	
 	lty = start_y + (yy * y_buffer);
 	
 	if(yy == menu_options[page]) {
-		slColor = c_aqua;
+		c = c_aqua;
 		xOffset -= (x_buffer/2);
 	}
 	
-	draw_text_color(ltx + xOffset, lty, ds_grid[# 0, yy], slColor,slColor,slColor,slColor,1);
+	draw_text_color(ltx + xOffset, lty, ds_grid[# 0, yy], c,c,c,c,1);
 	
 	
 	yy++;
@@ -52,3 +52,84 @@ repeat(ds_height){
 draw_line(start_x, start_y - y_buffer, start_x, lty + y_buffer);
 
 ////////////////////////////////////////////////////////////////////////Draw right side
+
+draw_set_halign(fa_left);
+
+var rtx = start_x + x_buffer;
+var rty;
+
+yy = 0;
+repeat(ds_height){
+	rty = start_y + (yy * y_buffer); 
+	
+	switch(ds_grid[# 1, yy]){
+		
+		case menu_element_type.shift: //SHIFT (ENUM)
+
+			var current_val = ds_grid[# 3, yy];
+			var current_array = ds_grid[# 4, yy];
+			c = c_white;
+			
+			var right_shift = " >>";
+			var left_shift = "<< ";
+			if(current_val == 0){
+				left_shift = " ";
+			} else if (current_val == array_length(ds_grid[# 4, yy]) -1){
+				right_shift = " ";
+			}
+			
+			draw_text_color(rtx, rty, left_shift + current_array[current_val] + right_shift, c, c, c, c, 1);
+			
+			break;
+		case menu_element_type.slider: //SLIDER
+			
+			var len = 64;
+			var current_val = ds_grid[# 3, yy];
+			var current_array = ds_grid[# 4, yy];
+			var circle_pos = ((current_val - current_array[0]) / (current_array[1] - current_array[0]));
+			c = c_white;
+			
+			draw_line_width(rtx, rty, rtx + len, rty, 2);
+			draw_circle_color(rtx + (circle_pos * len), rty, 4, c, c, false);
+			draw_text_color(rtx + (len * 1.2), rty, string(floor(circle_pos * 100)) + "%",c,c,c,c,1);
+			
+			break;
+		case menu_element_type.toggle: //TOGGLE
+			var current_val = ds_grid[# 3, yy];
+			var c1, c2;
+			
+			if(current_val == 0) {
+				c1 = c;
+				c2 = c_dkgray;
+			} else {
+				c1 = c_dkgray;
+				c2 = c;
+			}
+			
+			draw_text_color(rtx, rty, "ON",c1,c1,c1,c1,1);
+			draw_text_color(rtx + 32, rty, "OFF",c2,c2,c2,c2,1);
+		
+		case menu_element_type.input: //INPUT
+			var current_val = ds_grid[# 3, yy];
+			var string_val;
+			
+			switch(current_val){
+				case ord("W"): string_val = "UP"; break;
+				case ord("S"): string_val = "DOWN"; break;
+				case ord("A"): string_val = "LEFT"; break;
+				case ord("D"): string_val = "RIGHT"; break;
+				case mb_left: string_val = "SHOOT"; break;
+				case mb_right: string_val = "SKILL"; break;
+				default:		string_val = chr(current_val); break;
+			}
+			c = c_white;
+			draw_text_color(rtx, rty, string_val, c,c,c,c,1);
+			
+			break;
+	}
+	yy++;
+}
+
+
+
+draw_set_valign(fa_top);
