@@ -5,9 +5,21 @@ switch(room){
         draw_text(60, 20, "SCORE: " + string(score));
         draw_text(60, 40, "LIVES: " + string(lives));
 		
-		draw_text(room_width/2, 20,
-			string(global.currentCounterNum) + "/" + 
-			string(global.targetCounterNum));
+		var c;
+		if(global.currentCounterNum >= 0){
+			c = c_aqua;
+		} else {
+			c = c_red;
+		}
+		
+		draw_text_ext_transformed_color(room_width/2 - 70, 30,
+			string(global.currentCounterNum), 10, 400, 2, 2, 0,c,c,c,c,1);
+			
+		draw_text_ext_transformed(room_width/2, 30,
+			"/", 10, 400, 2, 2, 0);
+		
+		draw_text_ext_transformed(room_width/2 + 50, 30,
+			string(global.targetCounterNum), 10, 400, 2, 2, 0);
 
         break;
     case rm_start:
