@@ -2,8 +2,8 @@
 switch(room){
     case rm_game:
 
-        draw_text(60, 20, "SCORE: " + string(score));
-        draw_text(60, 40, "LIVES: " + string(lives));
+        draw_text_transformed(90, 20, "PONTUACAO: " + string(score), 1.2, 1.2, 1);
+        draw_text_transformed(60, 40, "VIDAS: " + string(lives), 1.2, 1.2, 1);
 		
 		var c;
 		if(global.currentCounterNum >= 0){
