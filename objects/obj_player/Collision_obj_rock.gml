@@ -10,7 +10,7 @@ if (!invincible) {
 	
 	if(lives <= 0) {
 		repeat (20) {
-				instance_create_layer(x, y, "Effects", obj_debris);
+			instance_create_layer(x, y, "Effects", obj_debris);
 		}
 	}
 }

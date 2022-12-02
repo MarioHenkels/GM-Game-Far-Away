@@ -1,5 +1,5 @@
 score = 0;
-lives = 3;
+lives = 5;
 
 global.pause = true;
 global.returnMenu = menu_page.main;
@@ -9,11 +9,11 @@ global.view_height	= camera_get_view_height(view_camera[0]);
 global.view_width	= camera_get_view_width(view_camera[0]);
 
 global.currentCounterNum = 0;
-global.targetCounterNum = 400;
+global.targetCounterNum = 50;
 
 global.lgEnemyCounterVal = 10;
 global.mdEnemyCounterVal = 5;
-global.mdEnemyCounterVal = 1;
+global.smEnemyCounterVal = 1;
 
 global.allEnemies = [];
 

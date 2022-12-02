@@ -2,7 +2,6 @@
 ///@function							handleCollisionBulletEnemy()
 
 function handleCollisionBulletEnemy() {
-	instance_destroy();
 	
 	switch(sprSize){
 		
@@ -62,6 +61,7 @@ function handleCollisionBulletEnemy() {
 			}
 			break;
 	}
+	instance_destroy();
 }
 
 ///@function							handleCollisionBulletRock()
@@ -80,12 +80,12 @@ function handleCollisionBulletRock(){
 					
 				case colors.blue: //blue
 					score += 10;
-					global.currentCounterNum += global.mdEnemyCounterVal;
+					global.currentCounterNum += global.smEnemyCounterVal;
 					break;
 					
 				case colors.red: //red
 					score += 10;
-					global.currentCounterNum -= global.mdEnemyCounterVal;
+					global.currentCounterNum -= global.smEnemyCounterVal;
 					break;
 			}
 			break;

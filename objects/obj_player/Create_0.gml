@@ -9,6 +9,6 @@ projectileSpeed = 10;
 
 bulletObj = obj_bullet1;
 
-invincible = true;
+invincible = false;
 
 sprColor = colors.blue;

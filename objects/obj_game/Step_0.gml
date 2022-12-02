@@ -31,9 +31,18 @@ if(key_enter) {
 }
 
 if(room == rm_game){
-	if(global.currentCounterNum >= global.targetCounterNum) {
+	if(global.currentCounterNum = global.targetCounterNum) {
 		audio_play_sound(sfx_arp_up1, 1, false);
-		room_goto(rm_win);
+		score += 100;
+		lives += 1;
+		
+		var newTargetNum;
+		
+		newTargetNum = round(irandom_range(global.currentCounterNum - 200, global.currentCounterNum + 200));
+			
+		if(!median(newTargetNum, global.currentCounterNum - 50, global.currentCounterNum + 50)){
+				global.targetCounterNum = newTargetNum + 60;
+		}
 	}
 
 	if(lives <= 0) {
