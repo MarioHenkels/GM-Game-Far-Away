@@ -3,6 +3,8 @@ key_enter = keyboard_check_pressed(vk_enter)
 			
 key_back = keyboard_check_pressed(vk_escape);
 
+global.enemyCount = array_length(layer_get_all_elements("Enemies"));
+
 if(key_back) {
 	global.pause = !global.pause;
 }

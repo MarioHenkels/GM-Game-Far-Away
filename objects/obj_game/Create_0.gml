@@ -15,6 +15,8 @@ global.lgEnemyCounterVal = 10;
 global.mdEnemyCounterVal = 5;
 global.smEnemyCounterVal = 1;
 
+global.enemyCount = 0;
+
 global.allEnemies = [];
 
 draw_set_font(fnt_text);

@@ -5,6 +5,8 @@ switch(room){
         draw_text_transformed(90, 20, "PONTUACAO: " + string(score), 1.2, 1.2, 1);
         draw_text_transformed(60, 40, "VIDAS: " + string(lives), 1.2, 1.2, 1);
 		
+		draw_text_transformed(90, 60, "INIMIGOS: " + string(global.enemyCount), 1.2, 1.2, 1);
+		
 		var c;
 		if(global.currentCounterNum >= 0){
 			c = c_aqua;
