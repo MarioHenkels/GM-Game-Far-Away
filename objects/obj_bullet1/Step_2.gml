@@ -3,3 +3,6 @@ trail.falloff = 0.1;
 trail.sprColor = sprColor;
 trail.speed = 0;
 trail.direction = image_angle;
+
+
+image_alpha -= 0.03;

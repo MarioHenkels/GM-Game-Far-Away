@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_moth_blue",
-    "path": "sprites/spr_moth_blue/spr_moth_blue.yy",
+    "name": "spr_moth_purple",
+    "path": "sprites/spr_moth_purple/spr_moth_purple.yy",
   },
   "solid": false,
   "visible": true,

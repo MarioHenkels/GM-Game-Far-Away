@@ -11,4 +11,4 @@ bulletObj = obj_bullet1;
 
 invincible = false;
 
-sprColor = colors.blue;
+sprColor = colors.purple;
