@@ -7,8 +7,9 @@ key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 key_special = keyboard_check_pressed(ord("R"));
 
 key_shoot = mouse_check_button_pressed(mb_left)
-			|| mouse_check_button_pressed(mb_right)
-			|| keyboard_check(vk_space);
+			|| mouse_check_button_pressed(mb_right);
+			
+key_shoot_special = keyboard_check(vk_space);
 
 //Calcular movimento
 var moveX = key_right - key_left;
@@ -21,6 +22,16 @@ if(key_shoot) {
 	bullet.direction = image_angle;
 	bullet.image_angle = image_angle;
 	bullet.speed = projectileSpeed;
+	bullet.btype = 0;
+	audio_play_sound(sfx_shoot1, 3, false);
+}
+
+if(key_shoot_special) {
+	var bullet = instance_create_layer(x, y, "Bullets", bulletObj);
+	bullet.direction = image_angle;
+	bullet.image_angle = image_angle;
+	bullet.speed = projectileSpeed;
+	bullet.btype = 1;
 	audio_play_sound(sfx_shoot1, 3, false);
 }
 

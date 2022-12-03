@@ -4,5 +4,6 @@ trail.sprColor = sprColor;
 trail.speed = 0;
 trail.direction = image_angle;
 
-
+if(btype == 1){
 image_alpha -= 0.03;
+}
