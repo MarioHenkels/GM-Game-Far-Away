@@ -1,5 +1,5 @@
 score = 0;
-lives = 5;
+lives = 1;
 
 global.pause = true;
 global.returnMenu = menu_page.main;
@@ -18,6 +18,11 @@ global.smEnemyCounterVal = 1;
 global.enemyCount = 0;
 
 global.allEnemies = [];
+
+global.menuInputting = false;
+
+//Dificuldade: 0- Fácil, 1- Médio, 2- Difícil.
+global.difficulty = 1;
 
 draw_set_font(fnt_text);
 

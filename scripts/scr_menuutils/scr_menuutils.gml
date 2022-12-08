@@ -29,18 +29,63 @@ function create_menu_page(){
 
 	return ds_grid;
 }
-function start_game(){}
+function start_game(){
+	if(room != rm_game){
+		room_goto(rm_game);
+	}
+	global.pause = false;
+}
 
-function resume_game(){}
+function restart_game(){
+	if(room == rm_gameover){
+		layer_destroy_instances("Enemies");
+		
+		score = 0;
+		lives = 5;
 
-function exit_game(){}
+		global.pause = true;
+		global.returnMenu = menu_page.main;
 
-function change_volume(){}
+		global.currentCounterNum = 0;
+		global.targetCounterNum = 50;
 
-function change_difficulty(){}
+		global.lgEnemyCounterVal = 10;
+		global.mdEnemyCounterVal = 5;
+		global.smEnemyCounterVal = 1;
 
-function show_ranking(){} //????
+		global.enemyCount = 0;
 
-function set_skill(){}
+		global.allEnemies = [];
 
-function set_shot_type(){}
+		global.menuInputting = false;
+
+		//Dificuldade: 0- Fácil, 1- Médio, 2- Difícil.
+		global.difficulty = 1;
+
+		//CONTROLES
+		global.key_enter	= vk_space;
+		global.key_back		= vk_escape;
+		global.key_up		= ord("W");
+		global.key_down		= ord("S");
+		global.key_left		= ord("A");
+		global.key_right	= ord("D");
+		global.key_shoot	= mb_left;
+		global.key_skill	= mb_right;
+		
+		room_goto(rm_start);
+		
+		instance_create_layer(room_height/2, room_width/2, "Player", obj_player);
+	}
+}
+
+function exit_game(){
+	game_end();
+}
+
+function change_difficulty(){
+	show_debug_message("DIFFICULTY: " + string(argument0));
+	
+	global.difficulty = int64(argument0);
+	
+	show_debug_message("global: " + string(global.difficulty));
+}

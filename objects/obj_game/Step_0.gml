@@ -9,8 +9,8 @@ if(key_back) {
 	global.pause = !global.pause;
 }
 
-show_debug_message("Rocks in Layer: " + string(array_length(layer_get_all_elements("Enemies"))));
-show_debug_message("Rocks in List: " + string(array_length(getAllInstancesByLayer("Enemies"))));
+//show_debug_message("Rocks in Layer: " + string(array_length(layer_get_all_elements("Enemies"))));
+//show_debug_message("Rocks in List: " + string(array_length(getAllInstancesByLayer("Enemies"))));
 
 if(key_enter) {
 
@@ -25,7 +25,7 @@ if(key_enter) {
 		case rm_win:
 		case rm_gameover:
 		
-			game_restart();
+			restart_game();
 	
 			break;
 	}
@@ -45,6 +45,8 @@ if(room == rm_game){
 		if(!median(newTargetNum, global.currentCounterNum - 50, global.currentCounterNum + 50)){
 				global.targetCounterNum = newTargetNum + 60;
 		}
+		
+		musicIncreaseIntensity();
 	}
 
 	if(lives <= 0) {
