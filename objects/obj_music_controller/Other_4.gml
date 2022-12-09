@@ -26,4 +26,6 @@ if(room == rm_game) {
 	audio_sound_gain(global.mscTheme, 1, 500);
 	
 
+} else if (room == rm_gameover){
+	audio_sound_gain(global.currentMusic, 0.5, 500);
 }

@@ -8,16 +8,16 @@ function handleCollisionBulletEnemy() {
 		case sizes.sm: //small
 			switch(sprColor){
 				case colors.grey: //grey
-					score += 11;
+					score += (11 + (global.difficulty * 2));
 					break;
 					
 				case colors.blue: //blue
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum += global.mdEnemyCounterVal;
 					break;
 					
 				case colors.red: //red
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum -= global.mdEnemyCounterVal;
 					break;
 			}
@@ -27,16 +27,16 @@ function handleCollisionBulletEnemy() {
 			switch(sprColor){
 				
 				case colors.grey: //grey
-					score += 11;
+					score += (11 + (global.difficulty * 2));
 					break;
 					
 				case colors.blue: //blue
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum += global.mdEnemyCounterVal;
 					break;
 					
 				case colors.red: //red
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum -= global.mdEnemyCounterVal;
 					break;
 			}
@@ -46,16 +46,16 @@ function handleCollisionBulletEnemy() {
 			switch(sprColor){
 				
 				case colors.grey: //grey
-					score += 11;
+					score += (11 + (global.difficulty * 2));
 					break;
 					
 				case colors.blue: //blue
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum += global.lgEnemyCounterVal;
 					break;
 				
 				case colors.red: //red
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum -= global.lgEnemyCounterVal;
 					break;
 			}
@@ -75,16 +75,16 @@ function handleCollisionBulletRock(){
 		case sizes.sm: //small
 			switch(sprColor){
 				case colors.grey: //grey
-					score += 11;
+					score += (11 + (global.difficulty * 2));
 					break;
 					
 				case colors.blue: //blue
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum += global.smEnemyCounterVal;
 					break;
 					
 				case colors.red: //red
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum -= global.smEnemyCounterVal;
 					break;
 			}
@@ -94,7 +94,7 @@ function handleCollisionBulletRock(){
 			switch(sprColor){
 				
 				case colors.grey: //grey
-					score += 11;
+					score += (11 + (global.difficulty * 2));
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);
@@ -105,7 +105,7 @@ function handleCollisionBulletRock(){
 					break;
 					
 				case colors.blue: //blue
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum += global.mdEnemyCounterVal;
 				
 					repeat(2) {
@@ -117,7 +117,7 @@ function handleCollisionBulletRock(){
 					break;
 					
 				case colors.red: //red
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum -= global.mdEnemyCounterVal;
 				
 					repeat(2) {
@@ -134,7 +134,7 @@ function handleCollisionBulletRock(){
 			switch(sprColor){
 				
 				case colors.grey: //grey
-					score += 11;
+					score += (11 + (global.difficulty * 2));
 				
 					repeat(2) {
 						var newRock = instance_create_layer(x, y, "Enemies", obj_rock);
@@ -145,7 +145,7 @@ function handleCollisionBulletRock(){
 					break;
 					
 				case colors.blue: //blue
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum += global.lgEnemyCounterVal;
 				
 					repeat(2) {
@@ -157,7 +157,7 @@ function handleCollisionBulletRock(){
 					break;
 				
 				case colors.red: //red
-					score += 10;
+					score += (10 + (global.difficulty * 2));
 					global.currentCounterNum -= global.lgEnemyCounterVal;
 				
 					repeat(2) {

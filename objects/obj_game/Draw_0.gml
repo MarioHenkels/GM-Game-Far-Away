@@ -50,18 +50,23 @@ switch(room){
 		
         var c = c_red;
         draw_text_transformed_color(
-             room_width/2, room_height/2 - 100, "GAME/OVER", 5, 5, 0, c, c, c, c, 1
+             room_width/2, room_height/2 - 100, "GAME / OVER", 5, 5, 0, c, c, c, c, 1
         );
 		
 		draw_text(
 			room_width/2, room_height/2,
-			"FINAL SCORE: " + string(score)
-		)
+			"PONTUACAO FINAL: " + string(score)
+		);
+		
+		draw_text(
+			room_width/2, room_height/2 + 40,
+			"CONTADOR ATINGIDO " + string(global.counterHitCount) + " VEZES!"
+		);
 		
 		draw_text(
 			room_width/2, room_height/2 + 100,
-			">> PRESS ENTER TO RESTART <<"
-		)
+			">> PRESSIONE ENTER PARA REINICIAR <<"
+		);
 
         break;
 }

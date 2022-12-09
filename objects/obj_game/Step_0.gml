@@ -32,10 +32,13 @@ if(key_enter) {
 }
 
 if(room == rm_game){
+	
+	//Player Atingiu o número-alvo do Contador
 	if(global.currentCounterNum = global.targetCounterNum) {
 		audio_play_sound(sfx_arp_up1, 1, false);
-		score += 100;
-		lives += 1;
+		score += 100 * global.difficulty;
+		lives++;
+		global.counterHitCount++;
 		
 		var newTargetNum;
 		

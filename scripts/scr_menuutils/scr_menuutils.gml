@@ -45,6 +45,8 @@ function restart_game(){
 		
 		layer_destroy_instances("Enemies");
 		
+		random_set_seed(randomize());
+		
 		score = 0;
 		lives = 5;
 
@@ -59,13 +61,17 @@ function restart_game(){
 		global.smEnemyCounterVal = 1;
 
 		global.enemyCount = 0;
+		
+		global.counterHitCount = 0;
+		
+		global.background = choose(spr_background, spr_background_2, spr_background_3, spr_background_4);
 
 		global.allEnemies = [];
 
 		global.menuInputting = false;
-
-		//Dificuldade: 0- Fácil, 1- Médio, 2- Difícil.
-		global.difficulty = 1;
+		
+		global.projectileSpeed = 10;
+		global.projectileSpeedFast = 15;
 
 		//CONTROLES
 		global.key_enter	= vk_space;

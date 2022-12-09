@@ -9,4 +9,6 @@ if(room == rm_game) {
 	
 } else if (room == rm_start){
 	instance_create_layer(global.view_width/3, global.view_height/2.5, "Systems", obj_title_anim);
+} else if (room == rm_gameover){
+	global.pause = false;
 }

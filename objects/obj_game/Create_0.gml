@@ -19,6 +19,8 @@ global.smEnemyCounterVal = 1;
 
 global.enemyCount = 0;
 
+global.counterHitCount = 0;
+
 global.background = choose(spr_background, spr_background_2, spr_background_3, spr_background_4);
 
 global.allEnemies = [];
