@@ -5,8 +5,15 @@ key_back = keyboard_check_pressed(vk_escape);
 
 global.enemyCount = array_length(layer_get_all_elements("Enemies"));
 
-if(key_back) {
-	global.pause = !global.pause;
+if(room == rm_game){
+	if(key_back) {
+		if(global.pause){
+			global.pause = false;
+		} else {
+			instance_create_layer(global.view_width/3, global.view_height/2.5, "Systems", obj_title_anim);
+			global.pause = true;
+		}
+	}
 }
 
 //show_debug_message("Rocks in Layer: " + string(array_length(layer_get_all_elements("Enemies"))));
@@ -15,18 +22,10 @@ if(key_back) {
 if(key_enter) {
 
 	switch(room){
-		
-		case rm_start:
-	
-			room_goto(rm_game);
-	
-			break;
-			
+
 		case rm_win:
 		case rm_gameover:
-		
 			restart_game();
-	
 			break;
 	}
 

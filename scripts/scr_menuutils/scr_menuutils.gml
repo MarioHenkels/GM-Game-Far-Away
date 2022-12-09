@@ -38,6 +38,11 @@ function start_game(){
 
 function restart_game(){
 	if(room == rm_gameover){
+		
+		global.restarting = true;
+		
+		audio_sound_gain(global.currentMusic, 0, 500);
+		
 		layer_destroy_instances("Enemies");
 		
 		score = 0;
@@ -71,6 +76,8 @@ function restart_game(){
 		global.key_right	= ord("D");
 		global.key_shoot	= mb_left;
 		global.key_skill	= mb_right;
+		
+		global.restarting = false;
 		
 		room_goto(rm_start);
 		

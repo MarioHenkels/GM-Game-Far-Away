@@ -1,11 +1,11 @@
 
 if(!global.pause) exit;
 
-key_up = keyboard_check_pressed(global.key_up);
-key_down = keyboard_check_pressed(global.key_down);
-key_left = keyboard_check_pressed(global.key_left);
-key_right = keyboard_check_pressed(global.key_right);
-key_select = keyboard_check_pressed(global.key_enter);
+key_up = keyboard_check_pressed(global.key_up) || keyboard_check_pressed(vk_up);
+key_down = keyboard_check_pressed(global.key_down) || keyboard_check_pressed(vk_down);
+key_left = keyboard_check_pressed(global.key_left) || keyboard_check_pressed(vk_left);
+key_right = keyboard_check_pressed(global.key_right) || keyboard_check_pressed(vk_right);
+key_select = keyboard_check_pressed(global.key_enter) || keyboard_check_pressed(vk_enter);
 
 var menu_pages = global.menu_pages;
 var menu_options = global.menu_options;

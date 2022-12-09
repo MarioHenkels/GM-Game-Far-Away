@@ -7,27 +7,31 @@
 
 function handlePlayerMovement(moveX, moveY, accel, flightSpd){
 	
-	switch(moveX) {
-	    case 1:
-			motion_add(0, accel);
-			break;
-	    case -1:
-			motion_add(180, accel);
-			break;
-	}
+	if(!global.pause){
+		switch(moveX) {
+		    case 1:
+				motion_add(0, accel);
+				break;
+		    case -1:
+				motion_add(180, accel);
+				break;
+		}
 
-	switch(moveY) {
-	    case 1:
-		    motion_add(270, accel);
-		    break;
-	    case -1:
-		    motion_add(90, accel);
-		    break;
-	}
+		switch(moveY) {
+		    case 1:
+			    motion_add(270, accel);
+			    break;
+		    case -1:
+			    motion_add(90, accel);
+			    break;
+		}
 	
-	if(speed > flightSpd){
-	    speed = flightSpd;
-	} else if (speed < -flightSpd) {
-	    speed = -flightSpd
+		if(speed > flightSpd){
+		    speed = flightSpd;
+		} else if (speed < -flightSpd) {
+		    speed = -flightSpd
+		}
+	} else {
+		speed = 0;
 	}
 }

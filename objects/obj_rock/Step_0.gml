@@ -1,5 +1,10 @@
 
-image_angle += spinSpd * spinDir;
+if(!global.pause){
+	image_angle += spinSpd * spinDir;
+	speed = moveSpd;
+} else {
+	speed = 0;
+}
 
 prevSprColor = sprColor;
 prevSprSize = sprSize;

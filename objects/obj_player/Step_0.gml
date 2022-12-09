@@ -17,39 +17,42 @@ var moveX = key_right - key_left;
 var moveY = key_down - key_up;
 
 //Shoot
-if(key_shoot) {
+if(key_shoot && !global.pause) {
 	var bullet = instance_create_layer(x, y, "Bullets", bulletObj);
 	bullet.direction = image_angle;
 	bullet.image_angle = image_angle;
-	bullet.speed = projectileSpeed + 5;
 	bullet.btype = 0;
 	audio_play_sound(sfx_shoot1, 3, false);
 }
 
-if(key_shoot_special) {
+if(key_shoot_special && !global.pause) {
 	var bullet = instance_create_layer(x, y, "Bullets", bulletObj);
 	bullet.direction = image_angle;
 	bullet.image_angle = image_angle;
-	bullet.speed = projectileSpeed;
 	bullet.btype = 1;
-	audio_play_sound(sfx_shoot1, 3, false);
+	var aud = audio_play_sound(sfx_shoot1, 3, false);
+	audio_sound_gain(aud, 0.5, 0);
 }
 
 //Special
-if(key_special){
+if(key_special && !global.pause){
 	specialSwitchColor(getAllInstancesByLayer("Enemies"));
 }
 
 handlePlayerMovement(moveX, moveY, accel, flightSpd);
 
-var trail = instance_create_layer(x, y, "Effects", obj_debris);
-trail.falloff = 0.03;
-trail.sprColor = sprColor;
-trail.speed = 0;
-trail.direction = image_angle;
+if(!global.pause){
+	var trail = instance_create_layer(x, y, "Effects", obj_debris);
+	trail.falloff = 0.03;
+	trail.sprColor = sprColor;
+	trail.moveSpd = 0;
+	trail.direction = image_angle;
+}
 
 //Rotação
-image_angle = point_direction(x, y, mouse_x, mouse_y);
+if(!global.pause){
+	image_angle = point_direction(x, y, mouse_x, mouse_y);
+}
 
 //Faz o Objeto permanescer na tela
 move_wrap(true, true, sprite_width/2);

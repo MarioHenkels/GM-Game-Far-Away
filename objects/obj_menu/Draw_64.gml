@@ -7,20 +7,17 @@ var page = global.page;
 
 var gWidth = global.view_width, gHeight = global.view_height;
 
+var c = c_black;
+
 var ds_grid = menu_pages[page]
 var ds_height = ds_grid_height(ds_grid);
 
 var y_buffer = 32, x_buffer = 16;
 
-var start_y = (gHeight/2) - ((((ds_height - 1) / 2) * y_buffer));
+var start_y = (gHeight/2 + 200) - ((((ds_height - 1) / 2) * y_buffer));
 var start_x = gWidth / 2;
 
-
-
-///////////////////////////////////////////////////////////////////////Draw background
-var bgColor = c_black;
-
-draw_rectangle_color(0,0,gWidth,gHeight,bgColor,bgColor,bgColor,bgColor,false);
+draw_rectangle_color(start_x - 180, start_y - 37, start_x + 180, start_y + 100, c,c,c,c,false);
 
 ///////////////////////////////////////////////////////////////////////Draw left side
 draw_set_valign(fa_middle);

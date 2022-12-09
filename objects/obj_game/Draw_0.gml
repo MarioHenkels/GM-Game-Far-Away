@@ -1,6 +1,9 @@
 
 switch(room){
     case rm_game:
+	
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_center);
 
         draw_text_transformed(90, 20, "PONTUACAO: " + string(score), 1.2, 1.2, 1);
         draw_text_transformed(60, 40, "VIDAS: " + string(lives), 1.2, 1.2, 1);
@@ -22,30 +25,6 @@ switch(room){
 		
 		draw_text_ext_transformed(room_width/2 + 50, 30,
 			string(global.targetCounterNum), 10, 400, 2, 2, 0);
-
-        break;
-    case rm_start:
-
-		draw_set_halign(fa_center);
-		draw_set_valign(fa_center);
-		
-        var c = c_yellow;
-        draw_text_transformed_color(
-             room_width/2, 100, "FAR/AWAY", 5, 5, 0, c, c, c, c, 1
-        );
-		
-		draw_text(
-			room_width/2, room_height/2,
-			@"Score 1,000 points to win!
-
-do it...
-DO IT!!! 
-
->> PRESS ENTER TO START <<
-
-> PRESS ESC TO EXIT <
-"
-		)
 
         break;
     case rm_win:

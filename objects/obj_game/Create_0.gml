@@ -1,5 +1,7 @@
 score = 0;
-lives = 1;
+lives = 5;
+
+random_set_seed(randomize());
 
 global.pause = true;
 global.returnMenu = menu_page.main;
@@ -17,7 +19,14 @@ global.smEnemyCounterVal = 1;
 
 global.enemyCount = 0;
 
+global.background = choose(spr_background, spr_background_2, spr_background_3, spr_background_4);
+
 global.allEnemies = [];
+
+global.projectileSpeed = 10;
+global.projectileSpeedFast = 15;
+
+global.restarting = false;
 
 global.menuInputting = false;
 

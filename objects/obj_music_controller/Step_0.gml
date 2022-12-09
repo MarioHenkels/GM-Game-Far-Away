@@ -20,3 +20,14 @@ if(f4) { //from turbo to low
 musicBackFromTurbo();
 }
 
+if(oldPause != global.pause){
+	
+	if(global.pause){
+		audio_sound_gain(global.currentMusic, 0.5, 500);
+	}else{
+		audio_sound_gain(global.currentMusic, 1, 500);
+	}
+	
+	oldPause = global.pause;
+}
+
